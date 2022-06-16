@@ -29,6 +29,20 @@
       "jsx-a11y"
   ],
   "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": [
+        "error",
+        "always",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+    ],
+    "react/function-component-definition" : "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "settings": {
       "import/extension": [".js", ".jsx", ".ts", ".tsx"],
