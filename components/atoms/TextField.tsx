@@ -1,5 +1,4 @@
 import React, { ReactElement, InputHTMLAttributes } from 'react';
-import '../../styles/globals.scss';
 
 export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder: string,

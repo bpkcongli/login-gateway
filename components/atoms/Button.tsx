@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../styles/globals.scss';
 
 export interface ButtonProps {
   label: string,
