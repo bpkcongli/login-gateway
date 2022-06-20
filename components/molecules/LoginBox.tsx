@@ -82,7 +82,7 @@ export default function LoginBox({
             </p>
             <p className="kc-caption">
               Belum menerima email verifikasi?
-              <Link href="/resend-verification">  Klik disini</Link>
+              <Link href="/request-verification-link">  Klik disini</Link>
             </p>
           </div>
         </div>

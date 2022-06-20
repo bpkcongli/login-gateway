@@ -341,3 +341,40 @@ body {
       .kc-wrapper .kc-container .kc-content .kc-box-navigation {
         height: 200px;
         width: 200px; } }
+
+.kc-wrapper {
+  background-color: #CBCBCB;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .kc-wrapper .kc-rvl--wrapper {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative; }
+    .kc-wrapper .kc-rvl--wrapper .kc-rvl--content {
+      width: 420px;
+      padding: 0 10px; }
+      .kc-wrapper .kc-rvl--wrapper .kc-rvl--content h2 {
+        margin: 0 0 30px 0;
+        text-align: center; }
+      .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-input {
+        margin-bottom: 15px; }
+      .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-login-box--caption {
+        width: 100%; }
+        .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-login-box--caption .kc-caption {
+          color: #000000;
+          font-style: italic;
+          opacity: 0.5; }
+          .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-login-box--caption .kc-caption a:link {
+            color: #000000;
+            font-weight: 700;
+            text-decoration: underline;
+            opacity: 1; }
