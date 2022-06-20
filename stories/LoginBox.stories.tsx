@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 import { Story } from '@storybook/react';
-import LoginBox, { LoginBoxProps } from '../components/molecules/LoginBox';
+import LoginBox, { LoginBoxProps } from '../components/organisms/LoginBox';
 
 export default {
   title: 'Components/Molecules/LoginBox',

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import Router from 'next/router';
 import { toast } from 'react-toastify';
-import LoginBox from '../components/molecules/LoginBox';
+import LoginBox from '../components/organisms/LoginBox';
 import Wrapper from '../components/layouts/Wrapper';
 import {
   LOGIN_ADMIN,
