@@ -1,0 +1,22 @@
+.kc-wrapper {
+  background-color: #CBCBCB;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .kc-container {
+    padding-bottom: 150px;
+    
+    .kc-title { 
+      margin-bottom: 150px;
+   
+      h1 {
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+}

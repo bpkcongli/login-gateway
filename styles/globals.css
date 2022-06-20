@@ -243,7 +243,7 @@ body {
           color: #000000;
           font-style: italic;
           opacity: 0.5; }
-          .kc-login-box-backdrop .kc-login-wrapper .kc-login-box--content .kc-login-box--caption .kc-caption a:link {
+          .kc-login-box-backdrop .kc-login-wrapper .kc-login-box--content .kc-login-box--caption .kc-caption a:link, .kc-login-box-backdrop .kc-login-wrapper .kc-login-box--content .kc-login-box--caption .kc-caption a:visited {
             color: #000000;
             font-weight: 700;
             text-decoration: underline;
@@ -251,45 +251,6 @@ body {
 
 .kc-wrapper {
   background-color: #CBCBCB;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-  .kc-wrapper .kc-fp--wrapper {
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    position: relative; }
-    .kc-wrapper .kc-fp--wrapper .kc-fp--content {
-      width: 420px;
-      padding: 0 10px; }
-      .kc-wrapper .kc-fp--wrapper .kc-fp--content h2 {
-        margin: 0 0 30px 0;
-        text-align: center; }
-      .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-fp--text {
-        color: #595959;
-        text-align: center; }
-      .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-input {
-        margin-bottom: 15px; }
-      .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-login-box--caption {
-        width: 100%; }
-        .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-login-box--caption .kc-caption {
-          color: #000000;
-          font-style: italic;
-          opacity: 0.5; }
-          .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-login-box--caption .kc-caption a:link {
-            color: #000000;
-            font-weight: 700;
-            text-decoration: underline;
-            opacity: 1; }
-
-.kc-wrapper {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -298,83 +259,114 @@ body {
   justify-content: center; }
   .kc-wrapper .kc-container {
     padding-bottom: 150px; }
-    .kc-wrapper .kc-container .kc-login-title {
+    .kc-wrapper .kc-container .kc-title {
       margin-bottom: 150px; }
-      .kc-wrapper .kc-container .kc-login-title h1 {
+      .kc-wrapper .kc-container .kc-title h1 {
         text-align: center;
         margin: 0; }
-    .kc-wrapper .kc-container .kc-content {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 0 auto;
-      width: 1200px; }
-      .kc-wrapper .kc-container .kc-content button {
-        background-color: transparent;
-        border: none;
-        padding: 0; }
-      .kc-wrapper .kc-container .kc-content .kc-box-navigation {
-        border-radius: 20px;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        height: 220px;
-        justify-content: center;
-        padding: 32px;
-        width: 220px; }
-        .kc-wrapper .kc-container .kc-content .kc-box-navigation .kc-box-navigation--label {
-          color: #000000;
-          margin: 0;
-          text-align: center; }
-      .kc-wrapper .kc-container .kc-content #navigation-loginAdmin .kc-box-navigation {
-        background-color: #DE5B5B; }
-      .kc-wrapper .kc-container .kc-content #navigation-loginCs .kc-box-navigation {
-        background-color: #78D16A; }
-      .kc-wrapper .kc-container .kc-content #navigation-loginFunding .kc-box-navigation {
-        background-color: #4C82D2; }
-      .kc-wrapper .kc-container .kc-content #navigation-loginLending .kc-box-navigation {
-        background-color: #5F4CD2; }
-  @media screen and (max-width: 1280px) {
-    .kc-wrapper .kc-container .kc-content {
-      width: 1000px; }
-      .kc-wrapper .kc-container .kc-content .kc-box-navigation {
-        height: 200px;
-        width: 200px; } }
 
-.kc-wrapper {
-  background-color: #CBCBCB;
-  height: 100vh;
-  width: 100vw;
+.kc-wrapper .kc-forget-password--wrapper {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .kc-wrapper .kc-rvl--wrapper {
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    position: relative; }
-    .kc-wrapper .kc-rvl--wrapper .kc-rvl--content {
-      width: 420px;
-      padding: 0 10px; }
-      .kc-wrapper .kc-rvl--wrapper .kc-rvl--content h2 {
-        margin: 0 0 30px 0;
+  padding: 30px;
+  position: relative; }
+  .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content {
+    width: 420px;
+    padding: 0 10px; }
+    .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content h2 {
+      margin: 0 0 30px 0;
+      text-align: center; }
+    .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content .kc-forget-password--desc {
+      color: #595959;
+      text-align: center; }
+    .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content .kc-input {
+      margin-bottom: 15px; }
+    .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content .kc-forget-password--caption {
+      width: 100%; }
+      .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content .kc-forget-password--caption .kc-caption {
+        color: #000000;
+        font-style: italic;
+        opacity: 0.5;
         text-align: center; }
-      .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-input {
-        margin-bottom: 15px; }
-      .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-login-box--caption {
-        width: 100%; }
-        .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-login-box--caption .kc-caption {
+        .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content .kc-forget-password--caption .kc-caption a:link, .kc-wrapper .kc-forget-password--wrapper .kc-forget-password--content .kc-forget-password--caption .kc-caption a:visited {
           color: #000000;
-          font-style: italic;
-          opacity: 0.5; }
-          .kc-wrapper .kc-rvl--wrapper .kc-rvl--content .kc-login-box--caption .kc-caption a:link {
-            color: #000000;
-            font-weight: 700;
-            text-decoration: underline;
-            opacity: 1; }
+          font-weight: 700;
+          text-decoration: underline;
+          opacity: 1; }
+
+.kc-wrapper .kc-container .kc-login-gate {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1200px; }
+  .kc-wrapper .kc-container .kc-login-gate button {
+    background-color: transparent;
+    border: none;
+    padding: 0; }
+  .kc-wrapper .kc-container .kc-login-gate .kc-box-navigation {
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 220px;
+    justify-content: center;
+    padding: 32px;
+    width: 220px; }
+    .kc-wrapper .kc-container .kc-login-gate .kc-box-navigation .kc-box-navigation--label {
+      color: #000000;
+      margin: 0;
+      text-align: center; }
+  .kc-wrapper .kc-container .kc-login-gate #navigation-loginAdmin .kc-box-navigation {
+    background-color: #DE5B5B; }
+  .kc-wrapper .kc-container .kc-login-gate #navigation-loginCs .kc-box-navigation {
+    background-color: #78D16A; }
+  .kc-wrapper .kc-container .kc-login-gate #navigation-loginFunding .kc-box-navigation {
+    background-color: #4C82D2; }
+  .kc-wrapper .kc-container .kc-login-gate #navigation-loginLending .kc-box-navigation {
+    background-color: #5F4CD2; }
+
+@media screen and (max-width: 1280px) {
+  .kc-wrapper .kc-container .kc-login-gate {
+    width: 1000px; }
+    .kc-wrapper .kc-container .kc-login-gate .kc-box-navigation {
+      height: 200px;
+      width: 200px; } }
+
+.kc-wrapper .kc-request-verification--wrapper {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative; }
+  .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content {
+    width: 420px;
+    padding: 0 10px; }
+    .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content h2 {
+      margin: 0 0 30px 0;
+      text-align: center; }
+    .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content .kc-request-verification--desc {
+      color: #595959;
+      text-align: center; }
+    .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content .kc-input {
+      margin-bottom: 15px; }
+    .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content .kc-request-verification--caption {
+      width: 100%; }
+      .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content .kc-request-verification--caption .kc-caption {
+        color: #000000;
+        font-style: italic;
+        opacity: 0.5;
+        text-align: center; }
+        .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content .kc-request-verification--caption .kc-caption a:link, .kc-wrapper .kc-request-verification--wrapper .kc-request-verification--content .kc-request-verification--caption .kc-caption a:visited {
+          color: #000000;
+          font-weight: 700;
+          text-decoration: underline;
+          opacity: 1; }

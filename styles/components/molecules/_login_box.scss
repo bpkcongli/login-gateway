@@ -33,7 +33,7 @@
       width: 100%;
     }
   
-    .kc-popup-close{
+    .kc-popup-close {
       position: absolute;
       top: -10px; right: -10px;
       border: 1px solid #999999;
@@ -45,7 +45,7 @@
       color: #fff;
       text-align: center;
       padding: 0px; margin: 0px;
-  }
+    }
   
     .kc-login-box--content {
       width: 420px;
@@ -85,7 +85,7 @@
           font-style: italic;
           opacity: 0.5;
   
-          a:link {
+          a:link, a:visited {
             color: $neutral13;
             font-weight: 700;
             text-decoration: underline;

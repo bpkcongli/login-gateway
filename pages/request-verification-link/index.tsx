@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import Button from '../../components/atoms/Button';
 import TextField from '../../components/atoms/TextField';
+import Wrapper from '../../components/layouts/Wrapper';
 import AdminRegistrationService from '../../services/admin-registration';
 import { RequestVerificationLinkPayload } from '../../services/admin-registration/types';
 
@@ -58,10 +59,14 @@ export default function RequestVerificationLink() {
       <Head>
         <title>Kirim Ulang Verifikasi - Digital Community Bank</title>
       </Head>
-      <div className="kc-wrapper">
-        <div className="kc-rvl--wrapper">
-          <div className="kc-rvl--content">
+      <Wrapper>
+        <div className="kc-request-verification--wrapper">
+          <div className="kc-request-verification--content">
             <h2 className="kc-headline5">Kirim Verifikasi Email</h2>
+            <p className="kc-request-verification--desc kc-body2">
+              Masukkan email yang Anda gunakan untuk pendaftaran.
+              Kami akan mengirimkan kode OTP ke email Anda.
+            </p>
             <div className="kc-input">
               <TextField
                 _size="large"
@@ -73,7 +78,7 @@ export default function RequestVerificationLink() {
               />
             </div>
             <Button label="Kirim" size="long" onClick={handleSubmit} />
-            <div className="kc-login-box--caption">
+            <div className="kc-request-verification--caption">
               <p className="kc-caption">
                 Kembali ke halaman login -
                 <Link href="/"> Klik disini</Link>
@@ -81,7 +86,7 @@ export default function RequestVerificationLink() {
             </div>
           </div>
         </div>
-      </div>
+      </Wrapper>
     </>
   );
 }

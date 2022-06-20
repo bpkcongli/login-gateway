@@ -1,13 +1,5 @@
 .kc-wrapper {
-  background-color: #CBCBCB;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .kc-rvl--wrapper {
+  .kc-request-verification--wrapper {
     background-color: $neutral1;
     border-radius: 8px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
@@ -17,7 +9,7 @@
     padding: 30px;
     position: relative;
   
-    .kc-rvl--content {
+    .kc-request-verification--content {
       width: 420px;
       padding: 0 10px;
   
@@ -26,19 +18,25 @@
         text-align: center;
       }
 
+      .kc-request-verification--desc {
+        color: $textLight7;
+        text-align: center;
+      }
+
       .kc-input {
         margin-bottom: 15px;
       }
   
-      .kc-login-box--caption {
+      .kc-request-verification--caption {
         width: 100%;
   
         .kc-caption {
           color: $neutral13;
           font-style: italic;
           opacity: 0.5;
+          text-align: center;
   
-          a:link {
+          a:link, a:visited {
             color: $neutral13;
             font-weight: 700;
             text-decoration: underline;

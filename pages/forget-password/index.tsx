@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import Button from '../../components/atoms/Button';
 import TextField from '../../components/atoms/TextField';
+import Wrapper from '../../components/layouts/Wrapper';
 import AdminManagement from '../../services/admin-management';
 import { ForgetPasswordPayload } from '../../services/admin-management/types';
 
@@ -65,12 +66,12 @@ export default function ForgotPassword() {
       <Head>
         <title>Lupa Password - Digital Community Bank</title>
       </Head>
-      <div className="kc-wrapper">
-        <div className="kc-fp--wrapper">
-          <div className="kc-fp--content">
+      <Wrapper>
+        <div className="kc-forget-password--wrapper">
+          <div className="kc-forget-password--content">
             <h2 className="kc-headline5">Lupa Password</h2>
-            <p className="kc-fp--text kc-body2">
-              Masukan email atau username anda yang terdaftar.
+            <p className="kc-forget-password--desc kc-body2">
+              Masukkan email atau username Anda yang sudah terdaftar.
               Kami akan mengirim langkah untuk verifikasi ulang.
             </p>
             <div className="kc-input">
@@ -84,7 +85,7 @@ export default function ForgotPassword() {
               />
             </div>
             <Button label="Kirim" size="long" onClick={handleSubmit} />
-            <div className="kc-login-box--caption">
+            <div className="kc-forget-password--caption">
               <p className="kc-caption">
                 Kembali ke halaman login -
                 <Link href="/"> Klik disini</Link>
@@ -92,7 +93,7 @@ export default function ForgotPassword() {
             </div>
           </div>
         </div>
-      </div>
+      </Wrapper>
     </>
   );
 }

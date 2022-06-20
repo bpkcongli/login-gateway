@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Router from 'next/router';
 import { toast } from 'react-toastify';
 import LoginBox from '../components/molecules/LoginBox';
+import Wrapper from '../components/layouts/Wrapper';
 import {
   LOGIN_ADMIN,
   LOGIN_CS,
@@ -72,12 +73,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Login Backoffice - Digital Community Bank</title>
       </Head>
-      <div className="kc-wrapper">
-        <div className="kc-container">
-          <div className="kc-login-title">
-            <h1 className="kc-headline2">DCB</h1>
-          </div>
-          <div className="kc-content">
+      <Wrapper>
+        <>
+          <div className="kc-login-gate">
             {Object.keys(TYPE_LOGIN).map((type) => {
               const typeLogin = TYPE_LOGIN[type];
               return (
@@ -96,8 +94,8 @@ export default function Home() {
             closeHandler={onCloseLoginBoxHandler}
             loginHandler={loginHandler}
           />
-        </div>
-      </div>
+        </>
+      </Wrapper>
     </>
   );
 }
