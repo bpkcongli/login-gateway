@@ -43,7 +43,9 @@
     ],
     "react/function-component-definition" : "off",
     "import/no-extraneous-dependencies": "off",
-    "jsx-a11y/label-has-associated-control": "off"
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-console": "off",
+    "no-shadow": "off"
   },
   "settings": {
       "import/extension": [".js", ".jsx", ".ts", ".tsx"],
