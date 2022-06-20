@@ -45,7 +45,10 @@
     "import/no-extraneous-dependencies": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "no-console": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "lines-between-class-members": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off"
   },
   "settings": {
       "import/extension": [".js", ".jsx", ".ts", ".tsx"],

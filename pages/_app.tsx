@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/images/favicon.png" />
       </Head>
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   );
 }

@@ -10,6 +10,7 @@ export default class MyDocuments extends Document {
         <Head>
           <link rel="stylesheet" href={APP_STYLE_PATH} />
           <link rel="stylesheet" href="/adminlte/plugins/fontawesome/css/all.min.css" />
+          <link rel="stylesheet" href="/react-toastify/ReactToastify.min.css" />
         </Head>
 
         <body className="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
