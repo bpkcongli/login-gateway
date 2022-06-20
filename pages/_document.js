@@ -9,6 +9,7 @@ export default class MyDocuments extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" href={APP_STYLE_PATH} />
+          <link rel="stylesheet" href="/adminlte/plugins/fontawesome/css/all.min.css" />
         </Head>
 
         <body className="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">

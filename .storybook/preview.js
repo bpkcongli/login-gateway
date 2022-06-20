@@ -1,4 +1,5 @@
-import '../styles/globals.scss';
+import '!style-loader!css-loader!sass-loader!../styles/globals.scss';
+import '!style-loader!css-loader!../public/adminlte/plugins/fontawesome/css/all.min.css';
 
 export const parameters = {
   actions: {argTypesRegex: "^on[A-Z].*"},
