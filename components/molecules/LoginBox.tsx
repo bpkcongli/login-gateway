@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextField from '../atoms/TextField';
 import Button from '../atoms/Button';
+import AdminAuthenticationService from '../../services/admin-authentication';
+import { LoginPayload } from '../../services/admin-authentication/types';
 
 export interface LoginBoxProps {
   visible: boolean;
   title: string;
   colorIdentity: string;
   closeHandler: Function;
+  loginHandler: Function;
 }
 
 export default function LoginBox({
@@ -14,12 +17,28 @@ export default function LoginBox({
   title,
   colorIdentity,
   closeHandler,
+  loginHandler,
 }: LoginBoxProps) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onClickHandler = async () => {
+    const loginPayload: LoginPayload = { username, password };
+    const loginFetchResult = await AdminAuthenticationService.login(loginPayload);
+    loginHandler(loginFetchResult);
+  };
+
+  const onClickClosePopupButton = () => {
+    setUsername('');
+    setPassword('');
+    closeHandler();
+  };
+
   return (
     <div className={`kc-login-box-backdrop ${visible ? 'kc-login-box-backdrop--visible' : ''}`}>
       <div className="kc-login-wrapper">
         <div className="kc-login-identity-bar" style={{ backgroundColor: `${colorIdentity}` }} />
-        <button className="kc-popup-close" type="button" onClick={() => closeHandler()}>
+        <button className="kc-popup-close" type="button" onClick={() => onClickClosePopupButton()}>
           <span className="fa fa-close" />
         </button>
         <div className="kc-login-box--content">
@@ -29,8 +48,11 @@ export default function LoginBox({
               <label htmlFor="email" className="kc-body1">Email</label>
               <div className="kc-input">
                 <TextField
+                  type="text"
                   id="email"
                   placeholder="Username or email"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
             </div>
@@ -38,8 +60,11 @@ export default function LoginBox({
               <label htmlFor="password" className="kc-body1">Password</label>
               <div className="kc-input">
                 <TextField
+                  type="password"
                   id="password"
                   placeholder="******"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
             </div>
@@ -47,6 +72,7 @@ export default function LoginBox({
           <Button
             label="login"
             size="long"
+            onClick={onClickHandler}
           />
           <div className="kc-login-box--caption">
             <p className="kc-caption">

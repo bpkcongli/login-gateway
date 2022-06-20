@@ -90,6 +90,8 @@
         color: $textLight5;
       }
 
+      &:-webkit-autofill {transition: background-color 5000s}
+
       &::placeholder {
         color: $neutral6;
       }

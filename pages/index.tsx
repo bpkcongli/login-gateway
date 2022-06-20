@@ -1,4 +1,8 @@
 import Head from 'next/head';
+import React, { useState } from 'react';
+import Router from 'next/router';
+import { toast } from 'react-toastify';
+import LoginBox from '../components/molecules/LoginBox';
 import {
   LOGIN_ADMIN,
   LOGIN_CS,
@@ -6,29 +10,61 @@ import {
   LOGIN_LENDING,
 } from '../config';
 
+interface TypeLogin {
+  id: string;
+  title: string;
+  colorIdentity: string;
+  redirectTo: string;
+}
+
 export default function Home() {
-  const test = [
-    {
+  const [typeLogin, setTypeLogin] = useState('');
+  const [isLoginBoxVisible, setIsLoginBoxVisible] = useState(false);
+  const TYPE_LOGIN: Record<string, TypeLogin> = {
+    loginAdmin: {
       id: 'loginAdmin',
       title: 'Login Admin',
-      url: LOGIN_ADMIN,
+      colorIdentity: '#DE5B5B',
+      redirectTo: LOGIN_ADMIN,
     },
-    {
+    loginCs: {
       id: 'loginCs',
       title: 'Login CS',
-      url: LOGIN_CS,
+      colorIdentity: '#78D16A',
+      redirectTo: LOGIN_CS,
     },
-    {
+    loginFunding: {
       id: 'loginFunding',
       title: 'Login Funding',
-      url: LOGIN_FUNDING,
+      colorIdentity: '#4C82D2',
+      redirectTo: LOGIN_FUNDING,
     },
-    {
+    loginLending: {
       id: 'loginLending',
       title: 'Login Lending',
-      url: LOGIN_LENDING,
+      colorIdentity: '#5F4CD2',
+      redirectTo: LOGIN_LENDING,
     },
-  ];
+  };
+
+  const onClickHandler = (typeLogin: string): void => {
+    setTypeLogin(typeLogin);
+    setIsLoginBoxVisible(true);
+  };
+
+  const onCloseLoginBoxHandler = () => {
+    setTypeLogin('');
+    setIsLoginBoxVisible(false);
+  };
+
+  const loginHandler = (fetchResult: any) => {
+    setIsLoginBoxVisible(false);
+    if (fetchResult.error) {
+      toast.error(fetchResult.message);
+    } else {
+      Router.replace(typeLogin && TYPE_LOGIN[typeLogin].redirectTo);
+    }
+  };
 
   return (
     <>
@@ -42,14 +78,24 @@ export default function Home() {
             <h1 className="kc-headline2">DCB</h1>
           </div>
           <div className="kc-content">
-            {test.map((each) => (
-              <a href={each.url} id={`navigation-${each.id}`} key={each.id}>
-                <div className="kc-box-navigation">
-                  <p className="kc-box-navigation--label kc-headline4">{each.title}</p>
-                </div>
-              </a>
-            ))}
+            {Object.keys(TYPE_LOGIN).map((type) => {
+              const typeLogin = TYPE_LOGIN[type];
+              return (
+                <button type="button" id={`navigation-${typeLogin.id}`} key={typeLogin.id} onClick={() => onClickHandler(typeLogin.id)}>
+                  <div className="kc-box-navigation">
+                    <p className="kc-box-navigation--label kc-headline4">{typeLogin.title}</p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
+          <LoginBox
+            visible={isLoginBoxVisible}
+            title={typeLogin && TYPE_LOGIN[typeLogin].title}
+            colorIdentity={typeLogin && TYPE_LOGIN[typeLogin].colorIdentity}
+            closeHandler={onCloseLoginBoxHandler}
+            loginHandler={loginHandler}
+          />
         </div>
       </div>
     </>

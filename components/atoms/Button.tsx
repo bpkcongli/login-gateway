@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string,
-  type?: 'primary' | 'secondary';
+  model?: 'primary' | 'secondary';
   size?: 'short' | 'long';
   disabled?: boolean;
   loading?: boolean;
@@ -10,13 +10,13 @@ export interface ButtonProps {
 
 export default function Button({
   label,
-  type,
+  model,
   size,
   disabled,
   loading,
   ...nativeProps
 }: ButtonProps) {
-  const btnType = `kc-button--${type}`;
+  const btnType = `kc-button--${model}`;
   const btnSize = `kc-button--${size}`;
 
   return (
@@ -32,7 +32,7 @@ export default function Button({
 }
 
 Button.defaultProps = {
-  type: 'primary',
+  model: 'primary',
   size: 'short',
   disabled: false,
   loading: false,

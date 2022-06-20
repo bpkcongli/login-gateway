@@ -164,6 +164,8 @@ body {
       .kc-textfield .kc-textfield--field input:disabled {
         background-color: #F5F5F5;
         color: #BFBFBF; }
+      .kc-textfield .kc-textfield--field input:-webkit-autofill {
+        transition: background-color 5000s; }
       .kc-textfield .kc-textfield--field input::placeholder {
         color: #BFBFBF; }
     .kc-textfield .kc-textfield--field .kc-textfield--suffix {
