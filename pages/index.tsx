@@ -92,7 +92,7 @@ export default function Home() {
           <LoginBox
             visible={isLoginBoxVisible}
             title={typeLogin && TYPE_LOGIN[typeLogin].title}
-            colorIdentity={typeLogin && TYPE_LOGIN[typeLogin].colorIdentity}
+            colorIdentity={typeLogin ? TYPE_LOGIN[typeLogin].colorIdentity : '#CBCBCB'}
             closeHandler={onCloseLoginBoxHandler}
             loginHandler={loginHandler}
           />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import TextField from '../atoms/TextField';
 import Button from '../atoms/Button';
 import AdminAuthenticationService from '../../services/admin-authentication';
@@ -77,11 +78,11 @@ export default function LoginBox({
           <div className="kc-login-box--caption">
             <p className="kc-caption">
               Lupa password?
-              <a href="/forgot-password">  Klik disini</a>
+              <Link href="/forget-password">  Klik disini</Link>
             </p>
             <p className="kc-caption">
               Belum menerima email verifikasi?
-              <a href="/request-verification-link">  Klik disini</a>
+              <Link href="/resend-verification">  Klik disini</Link>
             </p>
           </div>
         </div>

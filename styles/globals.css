@@ -250,6 +250,46 @@ body {
             opacity: 1; }
 
 .kc-wrapper {
+  background-color: #CBCBCB;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .kc-wrapper .kc-fp--wrapper {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative; }
+    .kc-wrapper .kc-fp--wrapper .kc-fp--content {
+      width: 420px;
+      padding: 0 10px; }
+      .kc-wrapper .kc-fp--wrapper .kc-fp--content h2 {
+        margin: 0 0 30px 0;
+        text-align: center; }
+      .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-fp--text {
+        color: #595959;
+        text-align: center; }
+      .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-input {
+        margin-bottom: 15px; }
+      .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-login-box--caption {
+        width: 100%; }
+        .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-login-box--caption .kc-caption {
+          color: #000000;
+          font-style: italic;
+          opacity: 0.5; }
+          .kc-wrapper .kc-fp--wrapper .kc-fp--content .kc-login-box--caption .kc-caption a:link {
+            color: #000000;
+            font-weight: 700;
+            text-decoration: underline;
+            opacity: 1; }
+
+.kc-wrapper {
   height: 100vh;
   width: 100vw;
   display: flex;
